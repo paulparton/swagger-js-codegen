@@ -1,3 +1,13 @@
+##This is a fork of [wcandillon/swagger-js-codegen](https://github.com/wcandillon/swagger-js-codegen)
+It contains a minor extension to parse the definitions inside the swagger file, such that these can be output as Typescript definitions.
+It also contains a small fix to make the swagger-to-typescript converter more robust.
+
+A [Pull-Request for those changes](https://github.com/wcandillon/swagger-js-codegen/pull/133) has been created. Once this PR is merged, I
+ will use the original npm-package.
+
+***
+
+
 #Swagger to JS & Typescript Codegen
 [![Circle CI](https://circleci.com/gh/wcandillon/swagger-js-codegen.svg?style=svg)](https://circleci.com/gh/wcandillon/swagger-js-codegen) [![NPM version](http://img.shields.io/npm/v/swagger-js-codegen.svg?style=flat)](http://badge.fury.io/js/swagger-js-codegen)
 
