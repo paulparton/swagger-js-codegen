@@ -15,6 +15,39 @@ This package generates a nodejs or angularjs class from a [swagger specification
 
 The typescript generator is based on [superagent](https://github.com/visionmedia/superagent) and can be used for both nodejs and the browser via browserify/webpack.
 
+#AgriWebb modified version instructions
+
+##Installation
+
+To install add this line to your package.json dependencies
+
+```javascript
+"swagger-js-codegen": "git://github.com/paulparton/swagger-js-codegen.git"
+```
+
+##Usage
+
+To generate a typescript definition from a strongloop swagger JSON file pass a configuration object that contains
+the swagger json to the getTypescriptTypes method.
+
+```javascript
+var fs = require('fs');
+var CodeGen = require('swagger-js-codegen').CodeGen;
+var swaggerJson = fs.readFileSync(__dirname + '/swagger.json');
+var opts = {
+    swagger: JSON.parse(swaggerJson)
+};
+
+var tsDefinitions = CodeGen.getTypescriptTypes(opts);
+
+var defFile = fs.createWriteStream('./myDefinitions.d.ts');
+defFile.write(tsDefinitions);
+```
+
+
+
+
+
 ##Installation
 ```bash
 npm install swagger-js-codegen

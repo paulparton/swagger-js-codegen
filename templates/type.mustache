@@ -3,9 +3,6 @@
 {{=<% %>=}}
 <%#isRef%><%target%><%/isRef%><%!
 %><%#isAtomic%><%tsType%><%/isAtomic%><%!
-%><%#isObject%>{<%#properties%>
-'<%name%>': <%>type%><%/properties%>
-}<%/isObject%><%!
-%><%#isArray%>Array<<%#elementType%><%>type%><%/elementType%>>|<%#elementType%><%>type%><%/elementType%><%/isArray%><%#isBoolean%>boolean<%/isBoolean%>
-<%={{ }}=%>
-{{/tsType}}
+%><%#isObject%>{<%#properties%><%#isMethod%><%name%> (<%#parameters%><%name%>:<%type%><%^last%>,<%/last%> <%/parameters%>): Promise;
+<%/isMethod%><%^isMethod%><%name%>: <%>type%>; <%/isMethod%><%/properties%>}
+<%/isObject%><%!><%!%><%#isArray%>Array<<%#elementType%><%>type%><%/elementType%>>|<%#elementType%><%>type%><%/elementType%><%/isArray%><%#isBoolean%>boolean<%/isBoolean%><%={{ }}=%>{{/tsType}}
