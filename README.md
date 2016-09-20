@@ -1,19 +1,10 @@
-##This is a fork of [wcandillon/swagger-js-codegen](https://github.com/wcandillon/swagger-js-codegen)
-It contains a minor extension to parse the definitions inside the swagger file, such that these can be output as Typescript definitions.
-It also contains a small fix to make the swagger-to-typescript converter more robust.
 
-A [Pull-Request for those changes](https://github.com/wcandillon/swagger-js-codegen/pull/133) has been created. Once this PR is merged, I
- will use the original npm-package.
+##This is a fork of [eburi/swagger-js-codegen](https://github.com/eburi/swagger-js-codegen)
+I have added additional functionality to eburi's typescript definition generation. The changes here add support for typescript method definitions, specifically from a strongloop swagger json file.
+
+Once eburi's pull request has been merged to the master project I will branch from master and create a pull request for our changes.
 
 ***
-
-
-#Swagger to JS & Typescript Codegen
-[![Circle CI](https://circleci.com/gh/wcandillon/swagger-js-codegen.svg?style=svg)](https://circleci.com/gh/wcandillon/swagger-js-codegen) [![NPM version](http://img.shields.io/npm/v/swagger-js-codegen.svg?style=flat)](http://badge.fury.io/js/swagger-js-codegen)
-
-This package generates a nodejs or angularjs class from a [swagger specification file](https://github.com/wordnik/swagger-spec). The code is generated using [mustache templates](https://github.com/wcandillon/swagger-js-codegen/tree/master/lib/templates) and is quality checked by [jshint](https://github.com/jshint/jshint/) and beautified by [js-beautify](https://github.com/beautify-web/js-beautify).
-
-The typescript generator is based on [superagent](https://github.com/visionmedia/superagent) and can be used for both nodejs and the browser via browserify/webpack.
 
 #AgriWebb modified version instructions
 
@@ -44,8 +35,24 @@ var defFile = fs.createWriteStream('./myDefinitions.d.ts');
 defFile.write(tsDefinitions);
 ```
 
+###Everything past this point is the documentation provided by eburi / wcandillon.
+
+##This is a fork of [wcandillon/swagger-js-codegen](https://github.com/wcandillon/swagger-js-codegen)
+It contains a minor extension to parse the definitions inside the swagger file, such that these can be output as Typescript definitions.
+It also contains a small fix to make the swagger-to-typescript converter more robust.
+
+A [Pull-Request for those changes](https://github.com/wcandillon/swagger-js-codegen/pull/133) has been created. Once this PR is merged, I
+ will use the original npm-package.
+
+***
 
 
+#Swagger to JS & Typescript Codegen
+[![Circle CI](https://circleci.com/gh/wcandillon/swagger-js-codegen.svg?style=svg)](https://circleci.com/gh/wcandillon/swagger-js-codegen) [![NPM version](http://img.shields.io/npm/v/swagger-js-codegen.svg?style=flat)](http://badge.fury.io/js/swagger-js-codegen)
+
+This package generates a nodejs or angularjs class from a [swagger specification file](https://github.com/wordnik/swagger-spec). The code is generated using [mustache templates](https://github.com/wcandillon/swagger-js-codegen/tree/master/lib/templates) and is quality checked by [jshint](https://github.com/jshint/jshint/) and beautified by [js-beautify](https://github.com/beautify-web/js-beautify).
+
+The typescript generator is based on [superagent](https://github.com/visionmedia/superagent) and can be used for both nodejs and the browser via browserify/webpack.
 
 
 ##Installation
