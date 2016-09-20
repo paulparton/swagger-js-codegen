@@ -35,7 +35,7 @@ var defFile = fs.createWriteStream('./myDefinitions.d.ts');
 defFile.write(tsDefinitions);
 ```
 
-###Everything past this point is the documentation provided by eburi / wcandillon.
+##Everything past this point is the documentation provided by eburi / wcandillon.
 
 ##This is a fork of [wcandillon/swagger-js-codegen](https://github.com/wcandillon/swagger-js-codegen)
 It contains a minor extension to parse the definitions inside the swagger file, such that these can be output as Typescript definitions.
